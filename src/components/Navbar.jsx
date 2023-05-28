@@ -4,7 +4,7 @@ import {Link } from "react-scroll"
 const Navbar = () => {
   return (
     <div>
-      <nav class="navbar flex flex-row">
+      <nav class="navbar flex flex-row ">
         
         <div class="navbar-container container ">
         

@@ -5,7 +5,8 @@
 
 body{
   font-family: 'DM Sans',sans-serif;
-  
+  background:linear-gradient(45deg,#231C07,#276EF1);
+  color: #fff;
 }
 
 .Home{
@@ -82,7 +83,7 @@ body{
     width: 100%;
     background: #fff;
     color: #000;
-    opacity: 0.85;
+    opacity: 0.65;
     z-index: 100;
 }
 
@@ -117,13 +118,14 @@ body{
 
 .navbar li:hover{
     color: #ee0909;
+    font-weight: bolder;
     /* transform:translateX(1.2); */
     /* text-decoration: underline; */
 }
 
 @media (max-width: 768px){
     .navbar{
-        opacity: 0.95;
+        opacity: 0.75;
     }
 
     .navbar-container input[type="checkbox"],
