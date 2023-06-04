@@ -7,9 +7,9 @@ const Home = () => {
       <div className='flex-1 flex flex-col justify-center '>
         <h1 className='block heading1 font-bold text-[60px] sm:ml-10 ml-5'>THE <br className='sm:hidden' /> WEAK <br className='sm:hidden' /> GET EATEN </h1>
         <h4 className='block text-slate-50 text-[20px] ml-5 sm:ml-10 heading3 font-bold'>A complete fitness guide</h4><br />
-        <button className='ml-5 sm:ml-10 overflow-visible  w-[40%] md:w-[30%] sm:w-[20%] btn third block '><Link className='Link' activeClass="active" smooth spy to="bmicalculator">
+        <Link className='Link' activeClass="active" smooth spy to="programs"><button className='ml-5 sm:ml-10 overflow-visible  w-[10%] md:w-[10%] sm:w-[10%] btn third block '>
                 Get Started
-              </Link></button>
+              </button></Link>
       </div>
     </div>
   )
