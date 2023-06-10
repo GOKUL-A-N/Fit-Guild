@@ -16,7 +16,7 @@ const BmiCalculator = () => {
   function calculate(event){
     let h=(height*0.01)**2;
     let s=weight/h;
-    setbmi(s);
+    setbmi(Math.floor(s));
     event.preventDefault();
   }
 

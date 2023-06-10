@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const Footer = () => {
   return (
     <div className='flex flex-col sm:flex-row mt-32 pb-10'>
-      <h1 className='heading1 flex  justify-center items-center heading1 font-bold text-[32px] p-10'>HOW & WHERE TO FIND US</h1>
+      <h1 className='heading1 flex  justify-center items-center heading1 font-bold text-[32px] p-10'>HOW & WHERE TO FIND US ?</h1>
       <div className='ml-10 w-[164px] '>
       <h2 className='font-bold text-[18px] heading3'>Location</h2>
       <h2>India</h2>
