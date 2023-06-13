@@ -5,7 +5,7 @@ const TrainerCard = (props) => {
   return (
     <div className=''>
   
-     <section class="m-2 font-sans leading-normal flex">
+     <section class="m-2 font-sans leading-normal flex contain">
 
 
 

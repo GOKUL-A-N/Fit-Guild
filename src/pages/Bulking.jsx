@@ -1,10 +1,19 @@
-import React,{useState} from 'react'
+import React,{useState,useCallback} from 'react'
+import {motion as m} from "framer-motion";
+import Modal from '@netojose/react-modal'
 
 const Bulking = () => {
-  var [weight,setWeight]=useState();
-  var [mc,setCal] = useState();
-  var [bc,setBc] = useState();
-  var [pi,setPi]= useState();
+
+  const [isOpen, setIsOpen] = useState(false)
+  const openModal = useCallback(() => setIsOpen(true), [])
+  const closeModal = useCallback(() => setIsOpen(false), [])
+
+ 
+
+  var [weight,setWeight]=useState(0);
+  var [mc,setCal] = useState(0);
+  var [bc,setBc] = useState(0);
+  var [pi,setPi]= useState(0);
   function handleWeight(event){
     setWeight(event.target.value);
   }
@@ -19,7 +28,12 @@ const Bulking = () => {
     event.preventDefault();
   }
   return (
-    <div className='flex p-10 flex-col'>
+    <m.div className='flex p-10 flex-col overflow-x-hidden'
+    // initial={{x:"100%"}}
+    // animate={{x:"0%"}}
+    transition={{duration:1.75, ease:"easeOut"}}
+    exit={{opacity:1}}
+    >
       <h1 className='heading1 font-extrabold p-3 text-[32px] flex justify-center'>Fit Guild Bulking</h1>
       <h2 className='heading3 text-[20px] font-bold pb-4 pt-4'>What is bulking</h2>
       <p>Bulking refers to the muscle-building phase of a traditional bodybuilding routine. It involves creating a calorie surplus to support muscle growth.
@@ -30,22 +44,48 @@ const Bulking = () => {
 
         The goal is to use these additional calories to build muscle. A person must strength train during a bulking phase to stimulate muscle growth. Bulking increases muscle mass and body fat.</p>
 
-        <h2 className='pt-4 pb-4 font-bold text-[30px] font-bold heading3'>Calculate your  Calories</h2>
+       
         
         <form onSubmit={calculate} className="flex  flex-col p-0 m-0">
+        <h2 className='pt-4 pb-4 font-bold text-[30px] font-bold heading3'>Calculate your  Calories</h2>
           <label className='pb-2 text-[19px] left-0'>Enter Your Weight</label>
           <input className='p-3 text-black w-full sm:w-[20%] h-10' type='text' placeholder='weight' onChange={handleWeight} value={weight} />
           <button type='submit' className='p-5 m-5 left-0 ml-0 w-full sm:w-[20%] btn third'>Calculate Calories</button>
-          <h2 className='text-[20px] font-bold flex '>Your Maintanence Calories  : {mc}</h2>
+          <h2 className='text-[20px] font-bold flex '>Your Maintanence Calories  : {mc}cal</h2>
           <br /> 
-          <h2 className='text-[20px] font-bold flex '>Your Bulking Calories  : {bc}</h2>
+          <h2 className='text-[20px] font-bold flex '>Your Bulking Calories  : {bc}cal</h2>
           <br />
           <h2 className='text-[20px] font-bold flex '>Your  Protien Intake Must be  : {pi}g</h2>
           <h3 className='heading1 text-[18px] pt-4'>*Tip : Increase Your calorie intake according to your exercise</h3>
           <h3 className='heading1 text-[18px] pt-4'>*Tip : Do exercise atleast 4 times a week</h3>
         </form>
+        <br />
+        <h3 className='text-white text-[20px]'>For more informations subscribe now</h3>
+        <div >
+            <input className='btn third' type="button" value="Subscribe" onClick={openModal} />
+            <div className="">
+            <Modal  isOpen={isOpen} onRequestClose={closeModal} >
+                <div className='background m-[-20px]   justify-center'>
+                    <h3 className='text-center p-8 heading3 text-[28px] font-bold '>What's Inside</h3>
+                    <ul className='flex flex-col items-center p-10'>
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>1.Introdu<br className='sm:hidden'/>ction</li><br />
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>2.Goal Setting</li><br />
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>3.Science Behind</li><br />
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>4.Diet Plans</li><br />
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>5.Workout Plans</li><br />
+                      <li className='w-[80%] p-8 text-center bg-transparent border-white border text-[20px]'>6.One on One Doubts session with trainers</li>
+                    </ul>
+                    <div className='flex justify-center p-4 rounded'>
+                        <button className='btn third '>Subscribe $120</button>
+                        <input className='btn third ml-4' type="button" value="Close" onClick={closeModal} />
+                    </div>
+                </div>
+            </Modal>
+            </div>
+        </div>
         
-    </div>
+    
+    </m.div>
   )
 }
 

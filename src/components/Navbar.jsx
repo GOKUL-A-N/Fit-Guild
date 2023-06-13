@@ -48,7 +48,7 @@ const Navbar = () => {
            </ul>
            
            </div>
-           <h1 className='m-1 mr-5 font-bold text-[23px] flex justify-center items-center'>FitGuild</h1>
+           <button className='m-1 mr-5 font-bold text-[23px] flex justify-center items-center'><Link className='Link' activeClass="active" smooth spy to="home">FitGuild</Link></button>
     </nav>
     
         {/* <Outlet /> */}

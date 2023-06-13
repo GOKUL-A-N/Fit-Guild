@@ -8,7 +8,14 @@ body{
   background:linear-gradient(45deg,#231C07,#276EF1);
   color: #fff;
 }
-
+.background{
+    background:linear-gradient(45deg,#231C07,#276EF1);
+    color: #fff;
+}
+.span {
+    text-decoration: underline;
+    text-underline-offset: 8px;
+}
 .Home{
   background: url(./assets/home-6.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -237,3 +244,11 @@ body{
     }
 }
 
+.contain{
+    text-decoration: none;
+}
+.contain:hover{
+    border-color: red ;
+    border-width: 2px;
+    border-radius: 5px;
+}

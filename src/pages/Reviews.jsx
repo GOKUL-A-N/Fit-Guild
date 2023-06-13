@@ -1,13 +1,14 @@
 import React from 'react';
-import {ReviewContent} from "../constants"
+import {ReviewContent} from "../constants";
+import { motion } from "framer-motion"
 
 const Reviews = () => {
   return (
-    <div className='p-4'>
-      <h1 className='flex  justify-center items-center heading1 font-bold text-[32px]'>REVIEWS</h1>
-        <div className='flex flex-col md:flex-row '>
+    <div className='p-4 '>
+      <h1 className='flex  justify-center items-center heading1 font-bold text-[32px]'><span className='span'>REV</span>IEWS</h1>
+        <div className='flex flex-col md:flex-row  '>
         {ReviewContent.map((rev,index) => (
-            <div key={rev.id} class="p-3 max-w-10 overflow-x-auto mr-5 rounded overflow-hidden shadow shadow-indigo-500/50 mt-10 ">
+            <div key={rev.id} class="p-3 max-w-10 overflow-x-auto mr-5 rounded overflow-hidden shadow shadow-indigo-500/50 mt-10 contain">
             <div class="px-6 py-4">
               
               <p class="text-white-700 text-base">

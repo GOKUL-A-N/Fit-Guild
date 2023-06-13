@@ -2,7 +2,7 @@ import React from 'react'
 
 const TermsAndConditions = () => {
   return (
-    <div className='p-5'><h1 className='heading1 text-center p-5 font-bold text-[32px]'>TermsAndConditions</h1>
+    <div className='p-5 overflow-x-auto'><h1 className='heading1 text-center p-5 font-bold text-[32px]'>TermsAndConditions</h1>
       <div className='p-8 text-[17px]'>
       <div>
         <h3 className='heading3 font-bold text-[20px]'>1.General Conditions</h3>
