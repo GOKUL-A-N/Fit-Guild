@@ -49,7 +49,7 @@ const Bulking = () => {
         <form onSubmit={calculate} className="flex  flex-col p-0 m-0">
         <h2 className='pt-4 pb-4 font-bold text-[30px] font-bold heading3'>Calculate your  Calories</h2>
           <label className='pb-2 text-[19px] left-0'>Enter Your Weight</label>
-          <input className='p-3 text-black w-full sm:w-[20%] h-10' type='text' placeholder='weight' onChange={handleWeight} value={weight} />
+          <input className='p-3 text-black w-full sm:w-[20%] h-10 input' type='text' placeholder='weight' onChange={handleWeight} value={weight} />
           <button type='submit' className='p-5 m-5 left-0 ml-0 w-full sm:w-[20%] btn third'>Calculate Calories</button>
           <h2 className='text-[20px] font-bold flex '>Your Maintanence Calories  : {mc}cal</h2>
           <br /> 
