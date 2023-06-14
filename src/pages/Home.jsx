@@ -30,7 +30,7 @@ const Home = () => {
   }
 
   return (
-    <div className='Home h-screen flex justfiy-center'>
+    <div className='Home h-screen flex justfiy-center '>
       <div className='flex-1 flex flex-col justify-center '>
         {/* <h1 className='block heading1 font-bold text-[60px] sm:ml-10 ml-5'>THE <br className='sm:hidden' /> WEAK <br className='sm:hidden' /> GET EATEN </h1> */}
         {/* <h4 className='block text-slate-50 text-[20px] ml-5 sm:ml-10 heading3 font-bold'>{subheading}</h4><br />*/}

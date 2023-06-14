@@ -5,11 +5,15 @@
 
 body{
   font-family: 'DM Sans',sans-serif;
-  background:linear-gradient(45deg,#231C07,#276EF1);
+  /* background:linear-gradient(45deg,#000046,#1CB5E0 */
+  background-color: #090809;
+/* background-image: linear-gradient(45deg, #090809 0%, #020308 100%);
+ */
+ background: linear-gradient(90deg, rgba(0, 0, 2, 0.9) 0%, #00303F 99.44%);
   color: #fff;
 }
 .background{
-    background:linear-gradient(45deg,#231C07,#276EF1);
+    background:linear-gradient(45deg,#231C07,#023048);
     color: #fff;
 }
 .span {
@@ -25,9 +29,13 @@ body{
 }
 .heading3{
   color: #FF0000;
+  /* color: #14FE00; */
 }
 .heading1{
-  color: White;
+  /* color: #FFFFFF;
+   */
+   color: rgba(255, 255, 255, 0.9);
+   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 .btn {
@@ -246,9 +254,17 @@ body{
 
 .contain{
     text-decoration: none;
+    background: linear-gradient(112.87deg, rgba(111, 111, 111, 0.01) 0%, rgba(255, 255, 255, 0.1) 27.29%, rgba(124, 107, 107, 0.01) 100.01%);
+border: 1px solid rgba(255, 255, 255, 0.3);
+backdrop-filter: blur(40px);
+/* Note: backdrop-filter has minimal browser support */
+
+border-radius: 4px;
+/* transform: matrix(0.87, 0.5, 0, 1, 0, 0); */
 }
 .contain:hover{
-    border-color: red ;
+    /* border-color: red ; */
+    
     border-width: 2px;
     border-radius: 5px;
 }
