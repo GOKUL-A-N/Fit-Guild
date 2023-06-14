@@ -10,10 +10,10 @@ const Bulking = () => {
 
  
 
-  var [weight,setWeight]=useState(0);
-  var [mc,setCal] = useState(0);
-  var [bc,setBc] = useState(0);
-  var [pi,setPi]= useState(0);
+  var [weight,setWeight]=useState();
+  var [mc,setCal] = useState();
+  var [bc,setBc] = useState();
+  var [pi,setPi]= useState();
   function handleWeight(event){
     setWeight(event.target.value);
   }
@@ -51,11 +51,11 @@ const Bulking = () => {
           <label className='pb-2 text-[19px] left-0'>Enter Your Weight</label>
           <input className='p-3 text-black w-full sm:w-[20%] h-10 input' type='text' placeholder='weight' onChange={handleWeight} value={weight} />
           <button type='submit' className='p-5 m-5 left-0 ml-0 w-full sm:w-[20%] btn third'>Calculate Calories</button>
-          <h2 className='text-[20px] font-bold flex '>Your Maintanence Calories  : {mc}cal</h2>
+          <h2 className='text-[20px] font-bold flex '>Your Maintanence Calories  : <span className='underline underline-offset-4 decoration-4 pl-4 '>{mc}cal</span></h2>
           <br /> 
-          <h2 className='text-[20px] font-bold flex '>Your Bulking Calories  : {bc}cal</h2>
+          <h2 className='text-[20px] font-bold flex '>Your Bulking Calories  : <span className='underline underline-offset-4 decoration-4 pl-4 '>{bc}cal</span></h2>
           <br />
-          <h2 className='text-[20px] font-bold flex '>Your  Protien Intake Must be  : {pi}g</h2>
+          <h2 className='text-[20px] font-bold flex '>Your  Protien Intake Must be  :<span className='underline underline-offset-4 decoration-4 pl-4 '>{pi}g</span> </h2>
           <h3 className='heading1 text-[18px] pt-4'>*Tip : Increase Your calorie intake according to your exercise</h3>
           <h3 className='heading1 text-[18px] pt-4'>*Tip : Do exercise atleast 4 times a week</h3>
         </form>

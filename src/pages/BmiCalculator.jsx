@@ -36,7 +36,7 @@ const BmiCalculator = () => {
           <label className='p-3 text-[19px] left-0'>Enter Your Height</label>
           <input className='p-3 text-black w-full sm:w-[50%] h-10 input' type='text' placeholder='height' onChange={handleHeight} value={height} />
           <button type='submit' className='p-5 m-5 left-0 ml-0 w-full sm:w-[50%] btn third'>Calculate BMI</button>
-          <h2 className='text-[20px] font-bold flex '>BMI is : {bmi}</h2>
+          <h2 className='text-[20px] font-bold flex '>BMI is : <span className='underline underline-offset-4 decoration-4 pl-4 '>{bmi}</span></h2>
         </form>
       </div>
       <div className='flex  items-center justify-center w-[100%] sm:w-[50%]'>
